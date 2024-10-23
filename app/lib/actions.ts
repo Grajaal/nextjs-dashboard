@@ -57,6 +57,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
     VALUES (${customerId}, ${amountInCents}, ${status}, ${date})
     `; 
   } catch (err) {
+    console.log(err)
     return {
       message: 'Database error: Failes to Create Invoice', 
     }
@@ -93,6 +94,7 @@ export async function updateInvoice (id: string, prevState: State, formData: For
       WHERE id = ${id}
       `;
   } catch (err) {
+    console.log(err)
     return {
       message: 'Database Error: Failed to Update Invoice',
     } 
@@ -107,6 +109,7 @@ export async function deleteInvoice(id: string) {
     await sql`
       DELETE FROM invoices WHERE id = ${id}`
   } catch (err) {
+    console.log(err)
     return {
       message: 'Database error: Failed to Detele Invoice'
     }
