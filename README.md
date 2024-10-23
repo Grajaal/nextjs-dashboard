@@ -9,5 +9,5 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 
 ### App loggin
 
-User: user@nextmail.com
+User: user@nextmail.com  
 Password: 123456
